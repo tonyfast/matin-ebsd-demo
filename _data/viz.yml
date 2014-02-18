@@ -1,7 +1,14 @@
-- name: Atomic Positions
-  description: "The location of an atoms in a molecular dynamics simulation."
+- name: Grain Map
+  description: "The identification of well separated grains output by TSL software"
   data: 
-   - Xdata: X
-     Ydata: Y
-     Zdata: Z
-     Cdata: chainid
+   - Xdata: ID
+     Ydata: ID
+     Zdata: 
+     Cdata: ID
+- name: Image Quality
+  description: "Quality metrics associated to the EBSD image assigned by TSL software"
+  data: 
+   - Xdata: IQuality
+     Ydata: IQuality
+     Zdata: 
+     Cdata: IQuality
