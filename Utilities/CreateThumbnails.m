@@ -71,6 +71,9 @@ for dd = 1 : numel(dyml.spatial)
                         end
                     end
                     hold off
+                else
+                    pcolor( Cdata );
+                    axis equal; axis tight;
                 end
                 
             case 3
