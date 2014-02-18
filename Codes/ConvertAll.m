@@ -6,8 +6,9 @@ postdir = '~/Work/matin-ebsd-demo/_posts';
 
 imdir = '~/Work/matin-ebsd-demo/assets';
 vizdata = '~/Work/matin-ebsd-demo/_data/viz.yml';
-
-
+% 
+%     name: 'Electron Backscattered Diffraction'
+%      url: 'http://www.equipment.materials.gatech.edu/tool?id=316291'
 dictexist = false;
 
 for ii = 1 : numel( dd)
@@ -20,6 +21,6 @@ for ii = 1 : numel( dd)
         H5toDictMD( h5nm, dictdir, source )
         dictexist = true;
     end
-    newpost = H5toYAML( h5nm, dictdir, postdir );
+    newpost = H5toYAML( h5nm, dictdir, postdir, source );
     CreateThumbnails( vizdata, h5nm, postdir, imdir);
 end

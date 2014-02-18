@@ -1,4 +1,4 @@
-function postout = H5toDict( h5nm, dictdata, to_dir );
+function postout = H5toDict( h5nm, dictdata, to_dir, source );
 
 if ~exist( 'to_dir','var')
     to_dir = './';
@@ -128,8 +128,8 @@ H5F.close(h5);
 return
 % Select the template
 fprintf( fo, 'source : \n','');
-        fprintf( fo, ' - name: \n', 'The Lorax');
-        fprintf( fo, '   url: %s\n','http://materials.gatech.edu' );
+        fprintf( fo, ' - name: \n', source.name);
+        fprintf( fo, '   url: %s\n',source.url );
 
         fprintf( fo, 'converter : \n','');
         fprintf( fo, ' - name: \n', mfilename);
