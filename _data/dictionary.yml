@@ -23,7 +23,7 @@ spatial :
       - isdisp: true
    - native : PHI
      pretty : PHI
-     units : 
+     units : radians
      description : Second Rotation in Bunge-Euler transform
      links : 
       - url: 
@@ -33,7 +33,7 @@ spatial :
       - isdisp: true
    - native : phi2
      pretty : phi2
-     units : 
+     units : radians
      description : Third Rotation in Bunge-Euler transform
      links : 
       - url: 
