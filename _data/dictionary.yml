@@ -42,8 +42,8 @@ spatial :
       - isplot: true
       - isdisp: true
  - group : 
-   name : TSL Outputs
-   description : Inline analyses produced by TSL software
+   - name : TSL Outputs
+     description : Inline analyses produced by TSL software
    - native : Image Quality
      pretty : IQuality
      units : 
