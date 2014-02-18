@@ -1,4 +1,4 @@
-function postout = H5toDict( h5nm, postout );
+function postout = H5toDict( h5nm, postout, source );
 
 if ~exist( 'postout','var')
     postout = './_data/dictionary.yml';
@@ -54,7 +54,7 @@ dnm = 'A-Dictionary-Template';
 dictout = fullfile( regexprep( p, 'data','posts'), sprintf( '%4i-%02i-%i-%s.markdown', c(1), c(2), c(3), dnm ));
 [p, f, ext] = fileparts( h5nm );
 % f = '~/my-awesome-site/_site/other';
-
+postout
 fo = fopen(  postout, 'w' );
 
 fprintf(fo,'url: %s\n', sprintf( '%4i/%02i/%i/%s.html', c(1), c(2), c(3), dnm ) );
@@ -63,15 +63,15 @@ fprintf(fo,'short: %s\n', sprintf( '%s', dnm ) );
 
 % Select the template
 fprintf( fo, 'source : \n','');
-        fprintf( fo, ' - name: \n', 'The Lorax');
-        fprintf( fo, '   url: %s\n','http://materials.gatech.edu' );
+        fprintf( fo, ' - name: %s\n', source.name);
+        fprintf( fo, '   url: %s\n',source.url );
 
         fprintf( fo, 'converter : \n','');
         fprintf( fo, ' - name: \n', mfilename);
         fprintf( fo, '   sha: %s\n',strtok( evalc( 'git log --abbrev-commit --pretty=oneline' ) ));
 
 
-if numel( Agg.names ) > 0 
+if exist( 'Agg','var') && numel( Agg.names ) > 0 
         fprintf( fo, 'aggregate : \n','');
         fprintf( fo, ' - group : \n');
         fprintf( fo, '   - name : General\n');
@@ -87,7 +87,7 @@ if numel( Agg.names ) > 0
     end
 end
 
-if numel( Spa.names ) > 0 
+if exist( 'Spa','var') && numel( Spa.names ) > 0 
         fprintf( fo, 'spatial : \n','');
         fprintf( fo, ' - group : \n');
         fprintf( fo, '   - name : General\n');

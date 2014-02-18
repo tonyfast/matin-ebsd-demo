@@ -1,134 +1,79 @@
-url: 2014/02/14/A-Dictionary-Template.html
+url: 2014/02/18/A-Dictionary-Template.html
 short: A-Dictionary-Template
 source : 
- - name: 
-   url: http://materials.gatech.edu
+ - name: Electron Backscattered Diffraction
+   url: http://www.equipment.materials.gatech.edu/tool?id=316291
 converter : 
  - name: 
-   sha: c4187a4
-aggregate : 
+   sha: 2c664dc
+spatial : 
  - group : 
    - name : General
      description : 
-   - native : timestep
-     pretty : timestep
+   - native : phi1
+     pretty : phi1
      units : 
-     description : An output of the simulation
-     links : 
-      - url: 
-        name: 
- - group: 
-   - name: Simulation inputs
-     description : Parameters assigned to the polymers to execute the simualtion/
-   - native : Nchain
-     pretty : Nchain
-     units : 
-     description : Number of individual polymer chains in the simulation 
-     links : 
-      - url: 
-        name: 
-   - native : Natoms
-     pretty : Natoms
-     units : quanity    
-     description : Number of Atoms input in to the simulation
-     links : 
-      - url: 
-        name: 
- - group :
-   - name : Simulation boundaries
-     description: This simulation is run using periodic boundary conditions.
-   - native : Xlo
-     pretty : Xlo
-     units : nm
-     description : Lower bounds of the X axis used by the simulation
-     links : 
-      - url: 
-        name: 
-   - native : Xhi
-     pretty : Xhi
-     units : nm
-     description : Upper bounds of the X axis used by the simulation
-     links : 
-      - url: 
-        name: 
-   - native : Ylo
-     pretty : Ylo
-     units : nm
-     description : XLower bounds of the Y axis used by the simulation
-     links : 
-      - url: 
-        name: 
-   - native : Yhi
-     pretty : Yhi
-     units : nm
-     description : Upper bounds of the Y axis used by the simulation
-     links : 
-      - url: 
-        name: 
-   - native : Zlo
-     pretty : Zlo
-     units : nm
-     description : Lower bounds of the Z axis used by the simulation
-     links : 
-      - url: 
-        name: 
-   - native : Zhi
-     pretty : Zhi
-     units : nm
-     description : Upper bounds of the Y axis used by the simulation
-     links : 
-      - url: 
-        name: 
-spatial : 
- - group : 
-   - name : Polymer Chain Information
      description : 
-   - native : chainid
-     pretty : chainid
+     links : 
+      - url: 
+        name: 
+     publish : 
+      - isplot: true
+      - isdisp: true
+   - native : PHI
+     pretty : PHI
      units : 
-     description : A index that identifies individual polymer chains
+     description : 
      links : 
       - url: 
         name: 
      publish : 
       - isplot: true
       - isdisp: true
-   - native : terminus
-     pretty : terminus
+   - native : phi2
+     pretty : phi2
      units : 
-     description : <2> is the end of a chain and <1> is an interior of the chain.
+     description : 
      links : 
       - url: 
         name: 
      publish : 
       - isplot: true
       - isdisp: true
- - group:
-   - name: Atomic Positions
-   - native : X
-     pretty : X
-     units : nm
-     description :  The X position of the atoms.
+   - native : IQuality
+     pretty : IQuality
+     units : 
+     description : 
      links : 
       - url: 
         name: 
      publish : 
       - isplot: true
       - isdisp: true
-   - native : Y
-     pretty : Y
-     units : nm
-     description : The Y position of the atoms.
+   - native : Confidence
+     pretty : Confidence
+     units : 
+     description : 
      links : 
       - url: 
         name: 
      publish : 
       - isplot: true
       - isdisp: true
-   - native : Z
-     pretty : Z
-     units : nm
-     description : The Z position of the atoms.
+   - native : Fit
+     pretty : Fit
+     units : 
+     description : 
+     links : 
+      - url: 
+        name: 
+     publish : 
+      - isplot: true
+      - isdisp: true
+   - native : ID
+     pretty : ID
+     units : 
+     description : 
      links : 
       - url: 
         name: 

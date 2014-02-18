@@ -74,6 +74,7 @@ fprintf( fo, 'layout: dataset-template-final\n');
 fprintf( fo, 'description: %s\n',description);
 
 fprintf( fo, 'aggregate: \n','');
+if exist( 'Agg','var')
 for dd = 1 : numel( Agg );
     fprintf( fo, ' - name: %s\n',regexprep( Agg{dd}.name, '/','Dataset '));
     native = [Agg{dd}.name,'/Aggregate'];
@@ -92,12 +93,14 @@ for dd = 1 : numel( Agg );
         end
     end
 end
+end
 
 h5 = H5F.open( h5nm );  
 fprintf( fo, 'spatial: \n','');
+if exist( 'Spa','var')
 for dd = 1 : numel( Spa );
     fprintf( fo, ' - name: %s\n',regexprep( Spa{dd}.name, '/','Dataset '));
-    native = [Agg{dd}.name,'/Spatial'];
+    native = [Spa{dd}.name,'/Spatial'];
     fprintf( fo, '   native: %s\n',native);
     desc = H5O.get_comment_by_name( h5, Spa{dd}.name,'H5P_DEFAULT');
     fprintf( fo, '   description: %s\n',desc);
@@ -112,6 +115,7 @@ for dd = 1 : numel( Spa );
             end
         end
     end
+end
 end
 
 
