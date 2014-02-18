@@ -8,12 +8,13 @@ converter :
    sha: 2c664dc
 spatial : 
  - group : 
-   - name : General
-     description : 
+   - name : Bunge-Euler Angles
+     description : The Bunge-Euler angles were computed using Magnesium as a reference
+     links: http://en.wikipedia.org/wiki/Euler_angles
    - native : phi1
      pretty : phi1
-     units : 
-     description : 
+     units : radians
+     description : First Rotation in Bunge-Euler transform
      links : 
       - url: 
         name: 
@@ -23,7 +24,7 @@ spatial :
    - native : PHI
      pretty : PHI
      units : 
-     description : 
+     description : Second Rotation in Bunge-Euler transform
      links : 
       - url: 
         name: 
@@ -33,14 +34,17 @@ spatial :
    - native : phi2
      pretty : phi2
      units : 
-     description : 
+     description : Third Rotation in Bunge-Euler transform
      links : 
       - url: 
         name: 
      publish : 
       - isplot: true
       - isdisp: true
-   - native : IQuality
+ - group : 
+   name : TSL Outputs
+   description : Inline analyses produced by TSL software
+   - native : Image Quality
      pretty : IQuality
      units : 
      description : 
@@ -50,7 +54,7 @@ spatial :
      publish : 
       - isplot: true
       - isdisp: true
-   - native : Confidence
+   - native : Confidence Index
      pretty : Confidence
      units : 
      description : 
@@ -70,10 +74,10 @@ spatial :
      publish : 
       - isplot: true
       - isdisp: true
-   - native : ID
+   - native : Grain ID
      pretty : ID
      units : 
-     description : 
+     description : Individual identifiers for separate grains
      links : 
       - url: 
         name: 
